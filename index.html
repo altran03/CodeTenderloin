@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeTenderloin - Web Development Projects</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 40px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #e0e0e0;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .project-card a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            height: 100%;
+        }
+
+        .project-icon {
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: white;
+        }
+
+        .portfolio-icon { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .mondrian-icon { background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%); }
+        .colors-icon { background: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%); }
+        .animal-icon { background: linear-gradient(135deg, #a8e6cf 0%, #7fcdcd 100%); }
+
+        .project-info {
+            padding: 25px;
+        }
+
+        .project-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .project-info p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag {
+            background: #f0f0f0;
+            color: #666;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .footer {
+            background: #f8f9fa;
+            padding: 30px;
+            text-align: center;
+            color: #666;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+                padding: 20px;
+            }
+            
+            .header {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>CodeTenderloin</h1>
+            <p>A collection of web development projects showcasing HTML, CSS, and JavaScript skills</p>
+        </div>
+
+        <div class="projects-grid">
+            <div class="project-card">
+                <a href="portfolio/">
+                    <div class="project-icon portfolio-icon">🎨</div>
+                    <div class="project-info">
+                        <h3>Portfolio</h3>
+                        <p>A personal portfolio website featuring home page, projects showcase, and resume with responsive design.</p>
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">Responsive</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="project-card">
+                <a href="mondrian/">
+                    <div class="project-icon mondrian-icon">🎨</div>
+                    <div class="project-info">
+                        <h3>Mondrian Art</h3>
+                        <p>Two implementations of Piet Mondrian-style art: one using pure CSS colors and another using images.</p>
+                        <div class="project-tags">
+                            <span class="tag">CSS</span>
+                            <span class="tag">Art</span>
+                            <span class="tag">Grid</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="project-card">
+                <a href="colors/">
+                    <div class="project-icon colors-icon">🌈</div>
+                    <div class="project-info">
+                        <h3>Colors Project</h3>
+                        <p>A color exploration website with themed pages for red, blue, green, yellow, orange, and purple.</p>
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">Design</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="project-card">
+                <a href="animal/">
+                    <div class="project-icon animal-icon">🦊</div>
+                    <div class="project-info">
+                        <h3>Animal Pages</h3>
+                        <p>A collection of animal-themed pages featuring fox, giraffe, and whale with custom styling.</p>
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">Themed</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Created by <a href="https://github.com/altran03" target="_blank">Alvin Tran</a> | 
+            <a href="https://github.com/altran03/CodeTenderloin" target="_blank">View on GitHub</a></p>
+        </div>
+    </div>
+</body>
+</html> 
