@@ -288,4 +288,19 @@ tr:hover {
   .hero {
     padding: 4rem 0;
   }
+}
+
+/* Resume page specific styles */
+.section a {
+  color: #666;
+  text-decoration: none;
+}
+
+.section a:hover {
+  text-decoration: underline;
+}
+
+/* Download section buttons */
+.section .btn {
+  color: white;
 } 
